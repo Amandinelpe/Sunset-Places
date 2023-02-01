@@ -65,7 +65,10 @@ const userController = {
     if (!userInfo) {
       return res.status(401).send("token expired or invalid please try again");
     }
-    res.status(200).send({ message: "valid token", user: userInfo.email });
+
+    return res
+      .status(200)
+      .send({ message: "valid token", user: userInfo.email });
   },
 };
 
