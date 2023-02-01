@@ -1,0 +1,13 @@
+.carousel {
+  width: 95vw;
+  height: 40vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none;
+}
