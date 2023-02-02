@@ -21,7 +21,7 @@
   font-size: 3rem;
   text-align: center;
   border-radius: 45px;
-  box-shadow: 5px 5px #ffd700;
+  box-shadow: 5px 5px #a3586d;
   background-color: #ffffff;
   margin-top: 3vw;
   cursor: pointer;
@@ -45,7 +45,7 @@
   bottom: 45vh;
   background-color: #ffffff;
   z-index: 99;
-  box-shadow: 4px 4px #ffd700;
+  box-shadow: 4px 4px #a3586d;
   border-radius: 25px;
   height: 80vh;
   display: flex;

@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 10vw;
-  gap: 50px;
+  padding: 0 1vw;
+  gap: 10px;
 }
 
 .posts-list {
@@ -14,27 +14,69 @@
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-}
-
-.post-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 30vw;
-  height: 40vh;
-  border-radius: 10px;
-  box-shadow: 5px 5px #ffd700;
-}
-
-.post-item .boulette {
-  width: 20px;
-  cursor: pointer;
+  margin-top: 3vw;
 }
 
 .post-image {
   width: 20vw;
-  height: 20vh;
+  height: 30vh;
   border-radius: 10px;
+}
+
+.button_post {
+  opacity: 0.9;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid #a3586d;
+  width: 15vw;
+  height: 5vh;
+  font-size: 1.4rem;
+  margin: 0 20px 0 5px;
+  font-family: "Annie Use Your Telescope";
+  background-color: #ffffff;
+  color: #00c2cb;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vw;
+}
+
+.button_post_supprimer {
+  opacity: 0.9;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid #a3586d;
+  width: 15vw;
+  height: 5vh;
+  font-size: 1.4rem;
+  margin: 0 20px 0 5px;
+  font-family: "Annie Use Your Telescope";
+  background-color: #ffffff;
+  color: #00c2cb;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+  margin-bottom: 2vw;
+}
+
+.button_post_modifier {
+  opacity: 0.9;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid #a3586d;
+  width: 15vw;
+  height: 5vh;
+  font-size: 1.4rem;
+  margin: 0 20px 0 5px;
+  font-family: "Annie Use Your Telescope";
+  background-color: #ffffff;
+  color: #00c2cb;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
 }

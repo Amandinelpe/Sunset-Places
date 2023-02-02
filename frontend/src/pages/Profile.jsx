@@ -1,3 +1,5 @@
+import PostItem from "@components/PostItem";
+import PostModal from "@components/PostModal";
 import React, { useEffect, useState, useContext } from "react";
 import Modal from "react-modal";
 import {
@@ -9,11 +11,7 @@ import {
 } from "../apis/post";
 import { authContext } from "../context/AuthContext";
 import "../styles/Profile.css";
-
-const ActionEnum = {
-  CREATE: 1,
-  UPDATE: 2,
-};
+import actionEnum from "../utils/actionPostEnum";
 
 function Profile() {
   const [posts, setPosts] = useState([]);
@@ -26,13 +24,13 @@ function Profile() {
   const { auth } = useContext(authContext);
 
   const openCreateModal = () => {
-    setAction(ActionEnum.CREATE);
+    setAction(actionEnum.CREATE);
     setModalTitle("");
     setModalDescription("");
     setModalIsOpen(true);
   };
   const openModifyModal = (id, title, description) => {
-    setAction(ActionEnum.UPDATE);
+    setAction(actionEnum.UPDATE);
     setModalId(id);
     setModalTitle(title);
     setModalDescription(description);
@@ -63,7 +61,7 @@ function Profile() {
       categoryId: 1,
     };
 
-    if (action === ActionEnum.CREATE) {
+    if (action === actionEnum.CREATE) {
       const response = await createPost(data);
       const image = e.target.image.files[0];
       if (image) {
@@ -91,28 +89,18 @@ function Profile() {
   return (
     <div className="content-page profile">
       <div>
-        <button type="button" onClick={openCreateModal}>
+        <button type="button" onClick={openCreateModal} className="button_post">
           Create Post
         </button>
       </div>
       <div className="posts-list">
         {posts.map((post) => (
-          <div key={post.id} className="post-item">
-            <img className="post-image" src={post.image_url} alt="post" />
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-            <button
-              type="button"
-              onClick={() =>
-                openModifyModal(post.id, post.title, post.description)
-              }
-            >
-              Modifier
-            </button>
-            <button type="button" onClick={() => handleDeletePost(post.id)}>
-              Supprimer
-            </button>
-          </div>
+          <PostItem
+            key={post.id}
+            post={post}
+            handleDeletePost={handleDeletePost}
+            openModifyModal={openModifyModal}
+          />
         ))}
       </div>
       <Modal
@@ -121,31 +109,14 @@ function Profile() {
         overlayClassName="overlay"
         onRequestClose={closeModal}
       >
-        <div>
-          <h2>{action === ActionEnum.CREATE ? "Create" : "Modify"} Post</h2>
-          <form onSubmit={onSubmit}>
-            <input type="file" name="image" id="image" />
-            <label htmlFor="title">Title</label>
-            <input
-              type="text"
-              name="title"
-              id="title"
-              value={modalTitle}
-              onChange={(e) => setModalTitle(e.target.value)}
-            />
-            <label htmlFor="description">Description</label>
-            <input
-              type="text"
-              name="description"
-              id="description"
-              value={modalDescription}
-              onChange={(e) => setModalDescription(e.target.value)}
-            />
-            <button type="submit">
-              {action === ActionEnum.CREATE ? "Create" : "Modify"}
-            </button>
-          </form>
-        </div>
+        <PostModal
+          action={action}
+          modalTitle={modalTitle}
+          setModalTitle={setModalTitle}
+          modalDescription={modalDescription}
+          setModalDescription={setModalDescription}
+          onSubmit={onSubmit}
+        />
       </Modal>
     </div>
   );

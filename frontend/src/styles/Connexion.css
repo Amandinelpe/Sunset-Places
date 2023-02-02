@@ -16,7 +16,7 @@
   text-align: left;
   padding: 20px;
   background: transparent;
-  box-shadow: 4px 4px #ffd700;
+  box-shadow: 4px 4px #a3586d;
   height: 45vh;
   border-radius: 25px;
   gap: 4vh;
@@ -39,7 +39,7 @@
 .connexion-form-button {
   padding: 1rem;
   border-radius: 30px;
-  border: #ffd700 1px solid;
+  border: #a3586d 1px solid;
   background: transparent;
   height: 1vh;
   width: 25vw;
@@ -71,7 +71,7 @@ h3 {
   font-weight: bold;
   font-family: "Annie Use Your Telescope";
   margin: 0;
-  margin-top: 1vh;
+  margin-top: 20vh;
   font-size: 5rem;
   color: #00c2cb;
 }

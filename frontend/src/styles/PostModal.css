@@ -1,0 +1,56 @@
+.post-modal {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-modal h2 {
+  font-size: 2rem;
+  font-family: "Annie Use Your Telescope";
+  color: #00c2cb;
+  margin-bottom: 3vw;
+}
+
+.post-modal .post-modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5vh;
+}
+
+.post-modal .post-modal-form .input-post-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5vh;
+}
+
+.post-modal .post-modal-form input {
+  padding: 1rem;
+  height: 1vh;
+  width: 25vw;
+  outline: none;
+  color: #00c2cb;
+  border: 1px solid #a3586d;
+  border-radius: 30px;
+}
+
+.post-modal .post-modal-form textarea {
+  padding: 1rem;
+  height: 6vh;
+  width: 25vw;
+  outline: none;
+  color: #00c2cb;
+  border: 1px solid #a3586d;
+  border-radius: 15px;
+}
+
+.post-modal .post-modal-form label {
+  font-size: 1.2rem;
+  color: #00c2cb;
+  font-family: "Annie Use Your Telescope";
+}
