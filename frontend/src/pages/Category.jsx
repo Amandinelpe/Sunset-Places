@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { useParams } from "react-router";
 import Modal from "react-modal";
 import DataCategory from "../utils/DataCategory";
@@ -22,6 +22,10 @@ function Category() {
     setModalDescription(desciption);
     setModalIsOpen(true);
   };
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div className="content-page category-page">
