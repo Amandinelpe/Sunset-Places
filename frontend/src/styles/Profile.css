@@ -32,3 +32,9 @@
   width: 20px;
   cursor: pointer;
 }
+
+.post-image {
+  width: 20vw;
+  height: 20vh;
+  border-radius: 10px;
+}

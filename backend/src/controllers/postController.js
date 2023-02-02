@@ -17,7 +17,12 @@ const postController = {
   createPost: (req, res, next) => {
     const { title, description, categoryId, userId } = req.body;
     postModel
-      .createOne({ title, description, categoryId, userId })
+      .createOne({
+        title,
+        description,
+        category_id: categoryId,
+        user_id: userId,
+      })
       .then(([post]) => res.status(201).send(post))
       .catch((err) => next(err));
   },
@@ -25,7 +30,7 @@ const postController = {
     const { id } = req.params;
     const { title, description, categoryId } = req.body;
     postModel
-      .updateOne({ title, description, categoryId }, id)
+      .updateOne({ title, description, category_id: categoryId }, id)
       .then((response) => {
         if (response.affectedRows !== 0) {
           return res.status(200).send("post updated successfully");

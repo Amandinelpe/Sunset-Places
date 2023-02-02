@@ -22,9 +22,9 @@ export const updatePost = (id, data) => {
     .then((response) => response.data);
 };
 
-export const updatePostImage = (post) => {
+export const updatePostImage = (id, file) => {
   return axios
-    .put(apiUrl + `post/upload/${post.id}`, post, {
+    .put(apiUrl + `post/upload/${id}`, file, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

@@ -5,6 +5,7 @@ import {
   createPost,
   deletePost,
   updatePost,
+  updatePostImage,
 } from "../apis/post";
 import { authContext } from "../context/AuthContext";
 import "../styles/Profile.css";
@@ -63,9 +64,21 @@ function Profile() {
     };
 
     if (action === ActionEnum.CREATE) {
-      await createPost(data);
+      const response = await createPost(data);
+      const image = e.target.image.files[0];
+      if (image) {
+        const formData = new FormData();
+        formData.append("img", image);
+        await updatePostImage(response.insertId, formData);
+      }
     } else {
       await updatePost(modalId, data);
+      const image = e.target.image.files[0];
+      if (image) {
+        const formData = new FormData();
+        formData.append("img", image);
+        await updatePostImage(modalId, formData);
+      }
     }
     getPosts();
     closeModal();
@@ -85,6 +98,9 @@ function Profile() {
       <div className="posts-list">
         {posts.map((post) => (
           <div key={post.id} className="post-item">
+            <img className="post-image" src={post.image_url} alt="post" />
+            <h2>{post.title}</h2>
+            <p>{post.description}</p>
             <button
               type="button"
               onClick={() =>
@@ -96,9 +112,6 @@ function Profile() {
             <button type="button" onClick={() => handleDeletePost(post.id)}>
               Supprimer
             </button>
-            <img src={post.image_url} alt="post" />
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
           </div>
         ))}
       </div>
@@ -111,6 +124,7 @@ function Profile() {
         <div>
           <h2>{action === ActionEnum.CREATE ? "Create" : "Modify"} Post</h2>
           <form onSubmit={onSubmit}>
+            <input type="file" name="image" id="image" />
             <label htmlFor="title">Title</label>
             <input
               type="text"
