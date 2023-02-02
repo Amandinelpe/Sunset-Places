@@ -6,11 +6,9 @@ import DataCarousel from "../utils/DataCarousel";
 
 function Slider() {
   return (
-    <Carousel className="carousel">
+    <Carousel className="custom-carousel">
       {DataCarousel.map((slide) => (
-        <div key={slide.id}>
-          <img src={slide.image} alt="" />
-        </div>
+        <img key={slide.id} src={slide.image} alt="" />
       ))}
     </Carousel>
   );

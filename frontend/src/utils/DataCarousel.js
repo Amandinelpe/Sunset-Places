@@ -11,7 +11,7 @@ import Biarritz from "../assets/Biarritz.jpg";
 const DataCarousel = [
   {
     id: 1,
-    image: Sunset,
+    image: marseille,
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const DataCarousel = [
   },
   {
     id: 5,
-    image: marseille,
+    image: Sunset,
   },
   {
     id: 6,

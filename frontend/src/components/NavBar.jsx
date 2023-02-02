@@ -16,9 +16,6 @@ function NavBar() {
         <img src={sunset} alt="logo" className="logo" />
       </Link>
       <div className="items_navbar">
-        <button type="button" className="input">
-          Category
-        </button>
         {auth.data && <UserNavbarItem />}
         {!auth.data && <ConnexionButton />}
       </div>

@@ -1,0 +1,53 @@
+.category {
+  top: -300px;
+  position: relative;
+}
+
+.category .category-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a3586d;
+  gap: 3vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.category .category-items div {
+  margin-top: 3vw;
+  width: 28vw;
+  height: 40vh;
+  border-radius: 45px;
+  box-shadow: 5px 5px hsla(0, 0%, 0%, 0.502);
+  background-color: #ffffff;
+  font-family: "Annie Use Your Telescope";
+  cursor: pointer;
+}
+.category .category-items div p {
+  margin-top: 0.4vw;
+  color: #a3586d;
+}
+
+.category .title h1 {
+  margin-bottom: 4vw;
+  margin-left: 2vw;
+  font-size: 5rem;
+  color: #a3586d;
+  font-family: "Annie Use Your Telescope";
+}
+
+.emoji {
+  margin-top: 2vw;
+  height: 15vh;
+}
+
+.category .category-items div:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.category .category_title {
+  font-size: 3rem;
+}

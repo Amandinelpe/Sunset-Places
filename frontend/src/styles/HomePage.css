@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
-
+.home_page {
+  z-index: 2;
+}
 .home_page .title h1 {
   font-family: "Annie Use Your Telescope";
   font-size: 5vw;
   margin-top: 6vw;
-  color: black;
+  color: #2cc2d2;
   margin-left: 2vw;
   margin-bottom: 2vw;
 }
