@@ -1,0 +1,65 @@
+.category-page .image_box {
+  width: 19vw;
+  border-radius: 10px;
+  margin-top: 2vw;
+}
+
+.category-page .container {
+  display: flex;
+  flex-direction: row;
+  gap: 85px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+
+.category-page .box_items {
+  font-family: "Annie Use Your Telescope";
+  width: 25vw;
+  height: 40vh;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 45px;
+  box-shadow: 5px 5px #a3586d;
+  background-color: #ffffff;
+  margin-top: 3vw;
+  cursor: pointer;
+}
+
+.category-page .box_items p {
+  color: #00c2cb;
+  font-size: 2rem;
+}
+
+.category-page .box_items:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.modal {
+  position: absolute;
+  top: 12vh;
+  left: 10vw;
+  right: 10vw;
+  bottom: 45vh;
+  background-color: #ffffff;
+  z-index: 99;
+  box-shadow: 4px 4px #a3586d;
+  border-radius: 25px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}

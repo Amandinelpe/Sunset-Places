@@ -1,0 +1,17 @@
+.connexion-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #595775;
+  width: 3.5vw;
+  height: 3.5vw;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+.connexion-button .connexion {
+  width: 1.6vw;
+  margin-right: 3px;
+}

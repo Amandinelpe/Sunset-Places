@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
+
+.user-navbar-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.user-navbar-item .avatar {
+  width: 3vw;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-top: 0.4vw;
+}
+
+.logout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #595775;
+  width: 3.2vw;
+  height: 3.2vw;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.logout-container .logout {
+  width: 1.6vw;
+  margin-left: 10px;
+  margin-right: 4px;
+}

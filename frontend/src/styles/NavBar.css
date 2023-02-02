@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 1rem 2rem;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.items_navbar button {
+  font-family: "Annie Use Your Telescope";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  width: 11vw;
+  height: 2.7vw;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.items_navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4vw;
+}
+
+.navbar .logo {
+  width: 7vw;
+  margin-top: 1vw;
+}
+
+.navbar .items_navbar button:hover {
+  transform: scale(1.1);
+}

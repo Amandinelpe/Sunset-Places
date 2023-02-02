@@ -1,0 +1,77 @@
+.connexion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5vh;
+}
+
+.connexion-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  width: 30vw;
+  text-align: left;
+  padding: 20px;
+  background: transparent;
+  box-shadow: 4px 4px #a3586d;
+  height: 45vh;
+  border-radius: 25px;
+  gap: 4vh;
+  margin-top: 2vw;
+  font-family: "Annie Use Your Telescope";
+  font-size: 1.8rem;
+  background-color: #ffffff;
+  color: #00c2cb;
+}
+
+.connexion-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1vh;
+}
+
+.connexion-input input,
+.connexion-form-button {
+  padding: 1rem;
+  border-radius: 30px;
+  border: #a3586d 1px solid;
+  background: transparent;
+  height: 1vh;
+  width: 25vw;
+  box-shadow: rgba(0, 0, 0, 0);
+  outline: none;
+  color: #00c2cb;
+}
+
+.connexion-input label {
+  font-size: 1.2rem;
+}
+
+.connexion-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background-color: #ffffff;
+  color: #00c2cb;
+  width: 15vw;
+  height: 0.6vh;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Annie Use Your Telescope";
+}
+
+.connexion .title,
+h3 {
+  font-weight: bold;
+  font-family: "Annie Use Your Telescope";
+  margin: 0;
+  margin-top: 20vh;
+  font-size: 5rem;
+  color: #00c2cb;
+}
