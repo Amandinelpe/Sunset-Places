@@ -1,5 +1,4 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import "../styles/Linepic.css";
 import Dune from "../assets/Dune.png";
 import Sunset from "../assets/sunset.jpg";
