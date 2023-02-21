@@ -1,13 +1,13 @@
 import CategoriesList from "@components/CategoriesList";
 import React from "react";
-import Carousel from "../components/Carousel";
+import Linepic from "../components/Linepic";
 import NavBar from "../components/NavBar";
 import "../styles/HomePage.css";
 
 function HomePage() {
   return (
     <div>
-      <Carousel />
+      <Linepic />
       <NavBar />
       <CategoriesList />
     </div>
